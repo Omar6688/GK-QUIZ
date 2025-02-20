@@ -15,6 +15,11 @@ The General Knowledge Quiz Game is an interactive web-based quiz designed to tes
   - [Responsive Design](#responsive-design)
   - [User Experience Enhancements](#user-experience-enhacements)
   - [Final Results & Replay Option](#final-results-&-replay-option)
+- [Technologies Used](#technologies-used)
+  - [Core Technologies](#1-core-technologies)
+  - [Frameworks & Libraries](#2-frameworks--libraries)
+  - [Development & Version Control](#3-development--version-control)
+  - [Tools & Resources](#4-tools--resources)
 
 
 
@@ -81,3 +86,31 @@ The General Knowledge Quiz Game is packed with interactive features designed to 
 - The final score page summarizes performance and encourages replayability.
 - A "Play Again" button allows users to restart the quiz without reloading the page.
 - Results are displayed in a visually appealing format to encourage engagement.
+
+## Technologies Used
+
+This project was built using a combination of front-end technologies to ensure a responsive, interactive, and structured experience.
+
+### **1. Core Technologies**
+- **HTML5** - Provides the structure of the quiz game.
+- **CSS3** - Used for styling, responsiveness, and animations.
+- **JavaScript (ES6)** - Implements quiz logic, interactivity, and dynamic content updates.
+- **jQuery** - Used to simplify DOM manipulation and enhance interactive elements.
+
+### **2. Frameworks & Libraries**
+- **jQuery** - Simplifies event handling and DOM manipulation, making JavaScript code more concise.
+- **Bootstrap (Optional)** - If used, mention how it assisted in styling and responsive design.
+- **API Integration (If applicable)** - If an API is incorporated, we will document how it was used.
+
+### **3. Development & Version Control**
+- **Git** - Used for version control, tracking changes efficiently.
+- **GitHub** - Repository hosting and project collaboration.
+- **GitHub Pages** - Deployment platform for making the project accessible online.
+
+### **4. Tools & Resources**
+- **Visual Studio Code (VS Code)** - The primary code editor used for development.
+- **Google Fonts** - For better typography and styling.
+- **FontAwesome** - Used for adding icons to improve UI.
+- **Chrome DevTools** - For debugging and testing responsive design.
+- **Jest (Planned for Automated Testing)** - JavaScript testing framework (to be included in the next section).
+
