@@ -69,3 +69,21 @@ function showQuestion() {
         button.addEventListener("click", () => checkAnswer(index, currentQuestion.correct));
         answerButtons.appendChild(button);
     });
+
+     // Start the countdown timer
+     timer = setInterval(() => {
+        timeLeft--;
+        updateTimer();
+
+        if (timeLeft === 0) {
+            clearInterval(timer);
+            nextQuestion(); // Move to the next question if time runs out
+        }
+    }, 1000);
+}
+
+// Function to Update the Timer Display
+function updateTimer() {
+    timerElement.innerText = `Time Left: ${timeLeft}s`;
+}
+
