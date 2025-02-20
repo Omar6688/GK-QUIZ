@@ -114,3 +114,50 @@ function checkAnswer(selectedIndex, correctIndex) {
         }
     });
 
+    score += points; // Add points
+
+    // Disable Next button after answering so it doesn't interfere
+    nextButton.disabled = true;
+
+    // Automatically move to next question after 1 second
+    setTimeout(nextQuestion, 1000);
+}
+
+// Function to Move to the Next Question (Now Works for "Next" Button Too)
+function nextQuestion() {
+    currentQuestionIndex++;
+    nextButton.disabled = false;
+    if (currentQuestionIndex < 20) {
+        showQuestion();
+    } else {
+        showFinalScore();
+    }
+}
+
+// Event Listener for "Next" Button (Allows Skipping)
+nextButton.addEventListener("click", () => {
+    clearInterval(timer); // Stop the timer
+    nextQuestion();
+});
+
+// Function to Show the Final Score
+function showFinalScore() {
+    document.getElementById("quiz-container").innerHTML = `
+        <h2>Quiz Completed!</h2>
+        <p>Your Score: ${score} points</p>
+        ${getFinalMessage(score)}
+        <button onClick="window.location.reload();">Refresh Page</button>
+    `;
+    // document.getElementById('restart-button').addEventListener('click', location.reload)
+}
+
+// Function to Determine the Final Message
+function getFinalMessage(score) {
+    if (score >= 50) return `<p>🎉 You're a Genius! 🤩</p><img src="assets/images/genius.jpg" width="200">`;
+    if (score >= 35) return `<p>Great Job! 🎉</p><img src="assets/images/great-job.jpg" width="200">`;
+    if (score >= 20) return `<p>Nice Try! Keep Learning! 📚</p><img src="assets/images/keep-learning.jpg" width="200">`;
+    return `<p>Better Luck Next Time! 😅</p><img src="assets/images/hard-luck.jpg" width="200">`;
+}
+
+// Start the quiz on page load
+startQuiz();
