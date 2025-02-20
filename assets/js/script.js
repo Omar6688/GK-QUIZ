@@ -24,3 +24,48 @@ const allQuestions = [
     { question: "Which famous scientist formulated the laws of motion?", answers: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"], correct: 0 },
     { question: "Which country has the most Olympic gold medals?", answers: ["USA", "China", "Russia", "Germany"], correct: 0 }
 ];
+
+let quizQuestions = []; // Stores 20 random questions
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timeLeft = 15;
+
+// Get elements from HTML
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const timerElement = document.getElementById("timer");
+const nextButton = document.getElementById("next-button");
+
+// Function to Start the Quiz
+function startQuiz() {
+    quizQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 20); // Pick 20 random questions
+    currentQuestionIndex = 0;
+    score = 0;
+    showQuestion();
+}
+
+// Function to Display a Question
+function showQuestion() {
+    clearInterval(timer); // Reset timer
+    timeLeft = 15;
+    updateTimer();
+
+    let currentQuestion = quizQuestions[currentQuestionIndex];
+
+    document.getElementById("question-number").innerText = `Question ${currentQuestionIndex + 1} of 20`;
+
+    questionElement.innerText = currentQuestion.question;
+    answerButtons.innerHTML = "";
+
+    // Enable the Next button to allow skipping
+    nextButton.classList.add("hidden");
+
+    // Create answer buttons dynamically
+    currentQuestion.answers.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.innerText = answer;
+        button.classList.add("btn");
+        button.addEventListener("click", () => checkAnswer(index, currentQuestion.correct));
+        answerButtons.appendChild(button);
+    });
