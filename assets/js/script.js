@@ -87,3 +87,30 @@ function updateTimer() {
     timerElement.innerText = `Time Left: ${timeLeft}s`;
 }
 
+// Function to Check Answer & Move to Next Question
+function checkAnswer(selectedIndex, correctIndex) {
+    clearInterval(timer); // Stop the timer
+
+    nextButton.classList.remove("hidden"); // Show button only after selecting an answer
+
+    let timeTaken = 15 - timeLeft;
+    let points = 0;
+
+    // Get all answer buttons
+    const buttons = document.querySelectorAll(".btn");
+
+    // Disable all buttons after selecting an answer
+    buttons.forEach((button, index) => {
+        button.disabled = true;
+        if (index === selectedIndex) {
+            if (selectedIndex === correctIndex) {
+                button.classList.add("correct"); // Show green for correct answer
+                if (timeTaken <= 5) points = 3;
+                else if (timeTaken <= 10) points = 2;
+                else points = 1;
+            } else {
+                button.classList.add("wrong"); // Show red for wrong answer
+            }
+        }
+    });
+
