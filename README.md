@@ -8,6 +8,13 @@ The General Knowledge Quiz Game is an interactive web-based quiz designed to tes
   - [User Goals](#user-goals)
   - [Project Story](#project-story)
 - [Design](#design)
+- [Features](#features)
+  - [Interactive Quiz Questions**](#interactive-quiz-questions)
+  - [Score Tracking](#score-tracking)
+  - [Timer Functionality](timer-functionality)
+  - [Responsive Design](#responsive-design)
+  - [User Experience Enhancements](#user-experience-enhacements)
+  - [Final Results & Replay Option](#final-results-&-replay-option)
 
 
 
@@ -40,3 +47,37 @@ The idea for this quiz game came from the growing popularity of online trivia ga
 - **Accessibility Considerations:** The design ensures high contrast between text and background colors for readability, making it accessible to users with visual impairments. Keyboard navigation was implemented to allow users to interact with the quiz using only the keyboard, improving usability for those with motor disabilities. Additionally, the site structure is designed to be compatible with screen readers, ensuring a fully inclusive experience.
 - **User Feedback & Interactivity:** Subtle animations and color changes are used to enhance user engagement. When a user selects an answer, it highlights immediately, providing instant visual feedback. Correct answers turn green, and incorrect answers turn red, reinforcing learning without overwhelming the user. The timer smoothly counts down, creating a sense of challenge while maintaining a fair and balanced pace.
 - **Consistency & Visual Appeal:** Consistent styling was applied throughout the application to maintain a professional and polished look. Buttons, containers, and text elements follow a uniform design pattern, ensuring a cohesive and aesthetically pleasing user experience.
+
+## Features
+
+The General Knowledge Quiz Game is packed with interactive features designed to provide an engaging and seamless user experience. Below are the core functionalities that make this project unique:
+
+### **1. Interactive Quiz Questions**
+- Users are presented with multiple-choice questions covering a range of topics.
+- Clicking an answer highlights the selected option for clarity.
+- Instant feedback is provided: correct answers turn green, while incorrect answers turn red.
+
+### **2. Score Tracking**
+- Users can monitor their progress as they answer each question.
+- A final score summary is displayed at the end of the quiz.
+- Encouraging messages based on performance keep the experience positive.
+
+### **3. Timer Functionality**
+- A countdown timer is displayed for each question, adding an element of challenge.
+- If the user does not answer within the time limit, the quiz automatically proceeds to the next question.
+- The timer is prominently positioned in the header for easy tracking.
+
+### **4. Responsive Design**
+- The quiz adapts seamlessly to desktop, tablet, and mobile screens.
+- Elements remain consistently positioned, ensuring a smooth and intuitive experience.
+- The layout is designed to keep the user focused on the quiz content.
+
+### **5. User Experience Enhancements**
+- **Animations & Visual Effects**: Buttons and answer selections include subtle hover effects.
+- **Navigation & Flow**: The quiz automatically moves forward when an answer is selected, creating a fast-paced experience.
+- **Skip Option**: Users have the option to skip a question if they prefer, keeping the experience fluid.
+
+### **6. Final Results & Replay Option**
+- The final score page summarizes performance and encourages replayability.
+- A "Play Again" button allows users to restart the quiz without reloading the page.
+- Results are displayed in a visually appealing format to encourage engagement.
