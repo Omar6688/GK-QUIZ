@@ -78,6 +78,7 @@ function showQuestion() {
         if (timeLeft === 0) {
             clearInterval(timer);
             nextQuestion(); // Move to the next question if time runs out
+            $("#next-button").fadeIn(500); // Show Next button if time runs out
         }
     }, 1000);
 }
@@ -153,10 +154,10 @@ function showFinalScore() {
 
 // Function to Determine the Final Message
 function getFinalMessage(score) {
-    if (score >= 50) return `<p>🎉 You're a Genius! 🤩</p><img src="assets/images/genius.jpg" width="200">`;
-    if (score >= 35) return `<p>Great Job! 🎉</p><img src="assets/images/great-job.jpg" width="200">`;
-    if (score >= 20) return `<p>Nice Try! Keep Learning! 📚</p><img src="assets/images/keep-learning.jpg" width="200">`;
-    return `<p>Better Luck Next Time! 😅</p><img src="assets/images/hard-luck.jpg" width="200">`;
+    if (score >= 50) return `<p>🎉 You're a Genius! 🤩</p><img src="assets/images/genius.jpg" alt="A young math whiz smiles as he has solved the riddles of the universe." width="200">`;
+    if (score >= 35) return `<p>Great Job! 🎉</p><img src="assets/images/great-job.jpg" alt="Cute little boy giving thumbs up saying Great Job" width="200">`;
+    if (score >= 20) return `<p>Nice Try! Keep Learning! 📚</p><img src="assets/images/keep-learning.jpg" alt="beautiful girl is studying while she is listnening to the music" width="200">`;
+    return `<p>Better Luck Next Time! 😅</p><img src="assets/images/hard-luck.jpg" alt="Girl, eyes closed and cross fingers hands hands, praying and wishing, happy and smile" width="200">`;
 }
 
 // Start the quiz on page load

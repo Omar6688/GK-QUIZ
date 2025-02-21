@@ -266,3 +266,10 @@ ul {
         padding: 8px 0;
     }
 }
+
+#next-button {
+    position: relative; /* Change to absolute if needed */
+    bottom: -20px; /* Adjust as necessary */
+    width: 150px;
+    margin: 20px auto;
+}
