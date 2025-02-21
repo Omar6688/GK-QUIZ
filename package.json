@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "The General Knowledge Quiz Game is an interactive web-based quiz designed to test users’ knowledge across multiple topics in a fun and engaging way. The project was developed as part of the Code Institute’s Interactive Frontend Development Milestone Project, showcasing skills in HTML, CSS, and JavaScript.",
   "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "test": "jest"
   },
@@ -10,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Omar6688/GK-QUIZ.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {

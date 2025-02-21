@@ -20,6 +20,7 @@ The General Knowledge Quiz Game is an interactive web-based quiz designed to tes
   - [Frameworks & Libraries](#2-frameworks--libraries)
   - [Development & Version Control](#3-development--version-control)
   - [Tools & Resources](#4-tools--resources)
+  - [Testing Tools](#5-testing-tools)
 
 
 
@@ -101,11 +102,14 @@ This project was built using a combination of front-end technologies to ensure a
 - **jQuery** - Simplifies event handling and DOM manipulation, making JavaScript code more concise.
 - **Bootstrap (Optional)** - If used, mention how it assisted in styling and responsive design.
 - **API Integration (If applicable)** - If an API is incorporated, we will document how it was used.
+- **jQuery (if implemented later)** – Will be used to simplify DOM manipulation and event handling.
+- **Jest** – A JavaScript testing framework used for writing and running automated tests.
 
 ### **3. Development & Version Control**
 - **Git** - Used for version control, tracking changes efficiently.
 - **GitHub** - Repository hosting and project collaboration.
 - **GitHub Pages** - Deployment platform for making the project accessible online.
+- **W3C Validator (HTML & CSS)** – Ensured that the code follows best practices and standards.
 
 ### **4. Tools & Resources**
 - **Visual Studio Code (VS Code)** - The primary code editor used for development.
@@ -113,4 +117,8 @@ This project was built using a combination of front-end technologies to ensure a
 - **FontAwesome** - Used for adding icons to improve UI.
 - **Chrome DevTools** - For debugging and testing responsive design.
 - **Jest (Planned for Automated Testing)** - JavaScript testing framework (to be included in the next section).
+
+### **5. Testing Tools**
+- **Jest (Automated Testing)** – Used to validate JavaScript functions and interactions.
+- **Manual Testing** – Conducted across multiple devices (desktop, tablet, mobile) to ensure full responsiveness.
 

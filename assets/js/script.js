@@ -161,3 +161,29 @@ function getFinalMessage(score) {
 
 // Start the quiz on page load
 startQuiz();
+
+$(document).ready(function () {
+    console.log("jQuery is working!"); // Check if jQuery is running
+
+    // Fade-in effect when the quiz starts
+    $("#question-container").hide().fadeIn(1000); 
+
+    // Animate Next button when it appears
+    $("#next-button").hide();
+    
+    // Show Next button smoothly after selecting an answer
+    $(".btn").on("click", function () {
+        $(".btn").prop("disabled", true); // Disable all buttons after selection
+        $("#next-button").fadeIn(500); 
+    });
+
+    // Add hover effect to the Next button
+    $("#next-button").hover(
+        function () {
+            $(this).css("background-color", "#e07b00");
+        }, 
+        function () {
+            $(this).css("background-color", "#ff8c00");
+        }
+    );
+});
