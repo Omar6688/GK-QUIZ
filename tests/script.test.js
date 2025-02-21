@@ -1,7 +1,7 @@
 // Import the quiz functions
 const { startQuiz, checkAnswer, nextQuestion } = require("../assets/js/script");
 
-// ✅ Step 1: Mock the DOM before importing script.js
+// Step 1: Mock the DOM before importing script.js
 beforeAll(() => {
     document.body.innerHTML = `
         <div id="question">Question?</div>
@@ -11,13 +11,13 @@ beforeAll(() => {
     `;
 });
 
-// ✅ Step 2: Start Quiz Test (Basic)
+// Step 2: Start Quiz Test (Basic)
 test("startQuiz should reset and start the quiz", () => {
     startQuiz();
     expect(document.getElementById("question").innerText).not.toBe("Question?"); 
 });
 
-// ✅ Step 3: Answer Selection Test (Correct Answer)
+// Step 3: Answer Selection Test (Correct Answer)
 test("checkAnswer should mark the correct answer in green", () => {
     const correctIndex = 0;
     const button = document.createElement("button");
@@ -28,7 +28,7 @@ test("checkAnswer should mark the correct answer in green", () => {
     expect(button.classList.contains("correct")).toBe(true);
 });
 
-// ✅ Step 4: Next Question Test
+// Step 4: Next Question Test
 test("nextQuestion should display a new question", () => {
     let initialQuestion = document.getElementById("question").innerText;
     nextQuestion();
