@@ -304,3 +304,15 @@ footer {
 .social-icons a:hover {
     color: #ff8c00; /* Orange hover effect */
 }
+
+/* Minimize Footer Height on Small Screens */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 10px 0; /* Reduce padding */
+        font-size: 14px; /* Decrease text size */
+    }
+
+    .social-icons a {
+        font-size: 20px; /* Slightly smaller icons */
+    }
+}
