@@ -98,6 +98,7 @@ Below are the wireframes designed for the General Knowledge Quiz project. These 
 - A full-page results container with a **white background**.
 - A **centered score display** showing the player's results.
 - A **performance feedback message** based on the score.
+- An **image feedback** based on the score.
 - A "Restart Quiz" button in an **orange box** allowing the player to try again.
 
 ### Wireframe Images
@@ -159,9 +160,7 @@ This project was built using a combination of front-end technologies to ensure a
 
 ### **2. Frameworks & Libraries**
 - **jQuery** - Simplifies event handling and DOM manipulation, making JavaScript code more concise.
-- **Bootstrap (Optional)** - If used, mention how it assisted in styling and responsive design.
-- **API Integration (If applicable)** - If an API is incorporated, we will document how it was used.
-- **jQuery (if implemented later)** – Will be used to simplify DOM manipulation and event handling.
+- **jQuery** – Will be used to simplify DOM manipulation and event handling.
 - **Jest** – A JavaScript testing framework used for writing and running automated tests.
 
 ### **3. Development & Version Control**
@@ -358,7 +357,7 @@ A special thanks to **Code Institute** for providing structured lessons and guid
 - **Stack Overflow** – Used for debugging and troubleshooting issues.
 
 ### **4️ Support & Mentorship**
-- A special thanks to my **Code Institute mentor**, who provided valuable feedback and recommendations for improving the project.
+- A special thanks to my **Code Institute mentor**, **Gareth MacGerr** who provided valuable feedback and recommendations for improving the project he was really the biggest support and help, I really appreciate his advices and time.
 - **Slack Community** – Their discussions and shared experiences were extremely helpful in resolving challenges.
 
 ### **5️ Testing & Validation**
