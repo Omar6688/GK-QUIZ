@@ -13,18 +13,15 @@ The General Knowledge Quiz Game is an interactive web-based quiz designed to tes
   - [User Goals](#user-goals)
   - [Project Story](#project-story)
 - [Design](#design)
-   - [color scheme](#color-scheme)
-   - [Typography](#️typography)
-   - [Accessibility Considerations](#-accessibility-considerations)
-   - [User Feedback & Interactivity](#user-experience-ux-design)
-   - [Consistency & Visual Appeal](#consistency-&-visual-appeal)
+   - [Design Choices](#design-choices)
+   - [Wireframes](#wireframes)
 - [Features](#features)
-  - [Interactive Quiz Questions**](#interactive-quiz-questions)
-  - [Score Tracking](#score-tracking)
-  - [Timer Functionality](timer-functionality)
-  - [Responsive Design](#responsive-design)
-  - [User Experience Enhancements](#user-experience-enhacements)
-  - [Final Results & Replay Option](#final-results-&-replay-option)
+  - [Interactive Quiz Questions](#1-interactive-quiz-questions)
+  - [Score Tracking](#2-score-tracking)
+  - [Timer Functionality](#3-timer-functionality)
+  - [Responsive Design](#4-responsive-design)
+  - [User Experience Enhancements](#5-user-experience-enhancements)
+  - [Final Results & Replay Option](#6-final-results--replay-option)
 - [Technologies Used](#technologies-used)
   - [Core Technologies](#1-core-technologies)
   - [Frameworks & Libraries](#2-frameworks--libraries)
@@ -35,28 +32,23 @@ The General Knowledge Quiz Game is an interactive web-based quiz designed to tes
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
   - [Validation Results](#validation-results)
-  - [Lighthouse Report](#lighthouse-report)
-  - [Automated Testing-Jest-](automated-testing-jest-)
+  - [Lighthouse Report Dev tools](#lighthouse-report-dev-tools)
+  - [Automated Testing Jest](#automated-testing-jest)
 - [Deployment and Local Development](#deployment-and-local-development)
-  - [Steps to Deploy on GitHub Pages](#github-pages)
-  - [How to Clone and Run Locally](#forking-the-github-repository)
-  - [Local Clone](#local-clone)
+  - [GitHub Repository](#github-repository)
+  - [Deploying with GitHub Pages](#deploying-with-github-pages)
+  - [Cloning the Repository](#cloning-the-repository)
+  - [Running the Quiz Locally](#running-the-quiz-locally)
+- [Credits & Acknowledgments](#credits--acknowledgments)
+  - [Code Institute](#1️-code-institute)
+  - [External Libraries & Tools](#2️-external-libraries--tools)
+  - [Online Resources](#3️-online-resources)
+  - [Support & Mentorship](#4️-support--mentorship)
+  - [Testing & Validation](#5️-testing--validation)
+- [Final Thoughts](#final-thoughts)
+  
 
-
-
-
-
-
-- [Credits](#credits)
-- [Acknowledgements](#acknowledgements)
-
-
-
-
-
-
-
-  ## User Experience (UX) Design
+  ## User Experience (UX)
 
 ### Target Audience
 The General Knowledge Quiz Game is designed for:
@@ -77,6 +69,7 @@ The idea for this quiz game came from the growing popularity of online trivia ga
 ---
 
 ## Design 
+
 ### Design Choices
 - **Color Scheme:** A dark blue background was chosen to create a sleek, modern, and professional look, providing a strong contrast with the white question container for readability. The orange color for the timer and buttons enhances visibility and draws user attention to key interactive elements, creating an engaging and energetic feel.
 - **Typography:** Readable and modern fonts were selected to ensure clear and accessible text for users. The font size and spacing were carefully adjusted to maintain readability across all screen sizes, preventing strain on the eyes.
@@ -84,6 +77,37 @@ The idea for this quiz game came from the growing popularity of online trivia ga
 - **Accessibility Considerations:** The design ensures high contrast between text and background colors for readability, making it accessible to users with visual impairments. Keyboard navigation was implemented to allow users to interact with the quiz using only the keyboard, improving usability for those with motor disabilities. Additionally, the site structure is designed to be compatible with screen readers, ensuring a fully inclusive experience.
 - **User Feedback & Interactivity:** Subtle animations and color changes are used to enhance user engagement. When a user selects an answer, it highlights immediately, providing instant visual feedback. Correct answers turn green, and incorrect answers turn red, reinforcing learning without overwhelming the user. The timer smoothly counts down, creating a sense of challenge while maintaining a fair and balanced pace.
 - **Consistency & Visual Appeal:** Consistent styling was applied throughout the application to maintain a professional and polished look. Buttons, containers, and text elements follow a uniform design pattern, ensuring a cohesive and aesthetically pleasing user experience.
+
+## Wireframes
+
+Below are the wireframes designed for the General Knowledge Quiz project. These provide a visual representation of the website's structure across three main pages:
+
+### 1. Welcome Page
+- A centered header at the top with the title **"Welcome to the General Knowledge Quiz!"**
+- A white instruction container displaying the **quiz rules and scoring system**.
+- A separate, orange **"Start Quiz"** button positioned below.
+
+### 2. Quiz Page
+- A fixed header at the top displaying **"General Knowledge Quiz"**.
+- A centered timer in an **orange box** below the header.
+- A question container in the middle with a **fixed size and white background**.
+- Four full-width answer buttons placed below the question.
+- A "Next" button below the answers, ensuring proper alignment.
+
+### 3. Results Page
+- A full-page results container with a **white background**.
+- A **centered score display** showing the player's results.
+- A **performance feedback message** based on the score.
+- A "Restart Quiz" button in an **orange box** allowing the player to try again.
+
+### Wireframe Images
+Below are the wireframes illustrating these pages:
+
+![Welcome Page Wireframe](wireframes/welcome_page.png)
+![Quiz Page Wireframe](wireframes/quiz_page.png)
+![Results Page Wireframe](wireframes/results_page.png)
+
+These wireframes ensure that the website layout is structured and meets the **Code Institute project submission standards**.
 
 ---
 
@@ -240,8 +264,7 @@ The following table outlines the manual tests conducted to ensure the quiz funct
 ![Mobile lighthouse report](/assets/readme-images/quiz-mobile-Dev.png)
 </details>
 
-
-## Automated Testing (Jest)
+### Automated Testing (Jest)
 
 As part of the project testing process, **Jest** was implemented to perform automated testing on JavaScript functions. The goal was to validate the correctness of quiz logic and ensure smooth functionality.  
 
@@ -251,11 +274,10 @@ However, during execution, the test suite encountered an issue related to the te
 
 This issue is related to Jest’s default test environment, which does not support **DOM-related functions** such as `document.getElementById()`. Despite multiple attempts to configure Jest to use **jsdom**, and with the help of **Google** and **ChatGPT** the issue persisted.  
 
-### **Resolution Attempts**
+#### **Resolution Attempts**
 1. **Modified Jest Configuration**:  
    - We attempted to set Jest’s environment to `jsdom` within the `package.json` file.
    - The configuration change did not resolve the issue.
-
 2. **Tried Adding Jest Environment Comment in Test File**:  
    - Added the following comment at the top of the test file:  
      ```js
@@ -264,17 +286,17 @@ This issue is related to Jest’s default test environment, which does not suppo
       */
      ```
    - The error remained unresolved.
-
 3. **Explored Alternative Testing Approaches**:  
    - Due to time constraints, manual testing was prioritized to ensure project functionality.
 
-### **Conclusion**
+#### **Conclusion**
 While Jest was successfully installed and configured, DOM-related test cases could not be executed due to an unresolved environment issue. Future improvements could include restructuring JavaScript functions to enable proper Jest testing or exploring alternative JavaScript testing frameworks.  
 
 Despite this limitation, the project underwent extensive **manual testing**, covering all core functionalities, ensuring a fully responsive and interactive user experience.
 
+---
 
-## Deployment
+## Deployment and Local Development
 
 This project was developed using **GitHub** for version control and **GitHub Pages** for deployment. Below are the steps taken to deploy the General Knowledge Quiz Game.
 
@@ -346,7 +368,9 @@ A special thanks to **Code Institute** for providing structured lessons and guid
 - **Manual Testing** – Conducted across multiple devices to ensure full responsiveness.
 - **Jest (Attempted)** – Although automated testing was attempted, challenges with Jest’s configuration led to prioritizing manual testing.
 
-### **Final Thoughts**
+---
+
+## **Final Thoughts**
 This project was a fantastic learning experience in building an **interactive quiz game** while implementing **JavaScript, jQuery, and responsive design techniques**. Future improvements may include integrating an API for dynamic questions and enhancing automated testing.
 
 **Thank you to everyone who contributed to this learning journey!**
