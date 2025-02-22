@@ -273,3 +273,34 @@ ul {
     width: 150px;
     margin: 20px auto;
 }
+
+/* Footer Styling */
+footer {
+    background-color: #1a1a3b; /* Dark blue background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff8c00; /* Orange hover effect */
+}

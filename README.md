@@ -314,7 +314,7 @@ To make the project live on the web, GitHub Pages was used. Below are the steps 
 5. A deployment link is generated. After a few minutes, the site becomes accessible.
 
 The **live project** can be accessed at:  
-🔗 **[Live Demo](https://github.com/Omar6688/GK-QUIZ)**
+🔗 **[Live Demo](https://omar6688.github.io/GK-QUIZ/)**
 
 ### **Cloning the Repository**
 To run this project locally, follow these steps:
