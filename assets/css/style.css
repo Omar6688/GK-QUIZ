@@ -305,14 +305,20 @@ footer {
     color: #ff8c00; /* Orange hover effect */
 }
 
-/* Minimize Footer Height on Small Screens */
+/* Adjust Footer Height for Mobile */
 @media screen and (max-width: 768px) {
     footer {
-        padding: 10px 0; /* Reduce padding */
-        font-size: 14px; /* Decrease text size */
+        padding: 5px 0; /* Reduce padding for a thinner footer */
+        font-size: 14px; /* Keep text small */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .social-icons {
+        gap: 10px; /* Reduce spacing between icons */
     }
 
     .social-icons a {
-        font-size: 20px; /* Slightly smaller icons */
+        font-size: 18px; /* Slightly smaller icons */
     }
 }
+
